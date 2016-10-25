@@ -40,4 +40,24 @@ var ModifiedDuration = function(MacaulayDuration, CouponRate)
 };
 
 
+var Duration = function(YearNo, Maturity, CouponPayment, DiscountFactor, PAR, Price)
+{
+	var time, SumInRespectiveToTime, SumInRespectiveToMaturity, Duration = 0;
+	
+	for(time = 1; time <= Maturity; time++)
+	{
+		CashFlow = CouponPayment;
+		if(time === Maturity)
+		{
+			CashFlow += Price;
+		}
+		SumInRespectiveToTime = ((CashFlow/Math.pow(1+DiscountFactor, time))/Price);
+		SumInRespectiveToMaturity = ((PAR/Math.pow(1+DiscountFactor, Maturity))/Price);
+		SumOfTimeMaturity = SumInRespectiveToTime + SumInRespectiveToMaturity;
+		Duration += SumOfTimeMaturity;
+	}
+
+	return Duration;
+};
+
 //console.log(ModifiedDuration(MacaulayDuration(3,6,1000,2,6), 6));
