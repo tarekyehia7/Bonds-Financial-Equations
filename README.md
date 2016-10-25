@@ -1,20 +1,21 @@
-
-
 # Financial Equations
 
+List of equations supported:
+
+Weighted Average Coupon
+Weighted Average Maturity
+Average Weighted Price
+Current Yield
+Adjusted Current Yield
+Yield to Maturity 
+Yield to Worst
+Duration
+Macaulay Duration 
+Modified Duration 
+Effective Duration 
+Convexity
 
 
 ## Usage
 
-
-
-## Developing
-
-
-
-### Tools
-
-Created with [Nodeclipse](https://github.com/Nodeclipse/nodeclipse-1)
- ([Eclipse Marketplace](http://marketplace.eclipse.org/content/nodeclipse), [site](http://www.nodeclipse.org))   
-
-Nodeclipse is free open-source project that grows with your contributions.
+Help to calculate Bonds complex equations
